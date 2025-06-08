@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--=============== FAVICON ===============-->
+  <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+  <!--=============== REMIXICONS ===============-->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/monan.css">
+
+  <title>Tôm kho mặn</title>
+</head>
+<style>
+  .search-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  #search-input {
+    width: 300px;
+    padding: 8px;
+    font-size: 12px;
+    border-radius: 10px;
+  }
+
+  #search-button {
+    padding: 8px 16px;
+    font-size: 12px;
+    background-color: rgb(230, 138, 19);
+    border-radius: 10px;
+  }
+
+  #search-results {
+    margin-top: 20px;
+  }
+</style>
+
+<body>
+  <!--==================== HEADER ====================-->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo">
+        <img src="assets/img/favicon.ico" alt="logo image">
+        <p style="
+        font-size: 40px;
+        background: url(https://th.bing.com/th/id/R.d31612f99fc69c3c1aa2539cfdc5dd15?rik=u2ptpAU%2bk2CgWw&riu=http%3a%2f%2fmedia.giphy.com%2fmedia%2futx2J17sW9IpG%2fgiphy.gif&ehk=XhMdH2V7BDFCmNvoSTbhXsQu%2bDGLMp4pBPB%2bueyfaXo%3d&risl=&pid=ImgRaw&r=0);
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;">Simply Recipes</p>
+      </a>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link">Home</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#" class="nav__link">Food</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#popular" class="nav__link">Nguyên liệu</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#popular1" class="nav__link">Các bước</a>
+          </li>
+        </ul>
+        <div class="search-container">
+          <input type="text" id="search-input" placeholder="Nhập món ăn muốn tìm">
+          <button onclick="search()" id="search-button">Tìm kiếm</button>
+        </div>
+        <!-- Close Button -->
+        <div class="nav__close" id="nav-close">
+          <i class="ri-close-line"></i>
+        </div>
+
+        <img src="assets/img/leaf-branch-4.png" alt="nav image" class="nav__img-1">
+        <img src="assets/img/leaf-branch-3.png" alt="nav image" class="nav__img-2">
+
+      </div>
+
+      <div class="nav__buttons">
+        <!-- Theme Change Button -->
+        <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+        <!-- Toggle button -->
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-apps-2-line"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!--==================== MAIN ====================-->
+  <main class="main">
+    <!--==================== HOME ====================-->
+    <section class="home section" id="home">
+      <div class="home__container container grid">
+        <img src="https://image-us.eva.vn/upload/3-2022/images/2022-07-22/image9-1658478615-15-width1400height1000.jpg"
+          style="border-radius: 40px;" alt="home image" class="home__img">
+
+        <div class="home__data">
+          <h1 class="home__title">
+            Tôm kho mặn
+          </h1>
+
+          <p class="home__description">
+            Chế biến và thưởng thức với những món ăn ngon nhất khắp mọi miền trên Tổ quốc
+          </p>
+          <div class="about__data">
+            <div class="recipe-icons">
+              <article>
+                <i class="fas fa-clock"></i>
+                <h5>Chuẩn bị</h5>
+                <p>10 phút.</p>
+              </article>
+              <article>
+                <i class="far fa-clock"></i>
+                <h5>Chế biến</h5>
+                <p>20 phút.</p>
+              </article>
+              <article>
+                <i class="fas fa-user-friends"></i>
+                <h5>Mức độ</h5>
+                <p>Dễ</p>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <img src="assets/img/leaf-branch-2.png" alt="home leaf" class="home__leaf-1">
+        <img src="assets/img/leaf-branch-4.png" alt="home leaf" class="home__leaf-2">
+
+    </section>
+    <div style="justify-content: center; text-align: center;">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/mLj34Ywem7A" title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+    <!--========= các step==========-->
+    <section class="popular section" id="popular">
+      <span class="section__subtitle">
+        Nguyên liệu
+      </span>
+      <div class="popular__container1 container grid">
+        <article class="popular__card1">
+          <h3 class="popular_name" style="text-align: left;">Tôm : 200g</h3>
+          <h3 class="popular_name" style="text-align: left;">Hành lá : 3 nhánh</h3>
+          <h3 class="popular_name" style="text-align: left;">Tỏi : 1 tép</h3>
+          <h3 class="popular_name" style="text-align: left;">Dầu ăn : 1 muỗng canh</h3>
+          <h3 class="popular_name" style="text-align: left;">Nước mắm : 1.5 muỗng canh</h3>
+          <h3 class="popular_name" style="text-align: left;">Nước tương : 1 muỗng canh</h3>
+          <h3 class="popular_name" style="text-align: left;">Tương ớt : 1/2 muỗng canh</h3>
+          <h3 class="popular_name" style="text-align: left;">Gia vị thông dụng</h3>
+
+
+        </article>
+
+        <section class="popular section" id="popular1">
+          <span class="section__subtitle">
+            Các bước
+          </span>
+          <div class="popular__container container grid">
+            <article class="popular__card">
+              <img src="https://cdn.tgdd.vn/2022/06/CookRecipe/GalleryStep/so-che-va-uop-tom-1.jpg"
+                style="border-radius: 60px;width: 170px; height: 155px;" alt="popular image" class="popular__img">
+              Bước 1
+              <h3 class="popular_name" style="text-align: left;">
+                Tôm bạn mua về rồi bóc vỏ, bỏ chỉ, rửa sạch sau đó để ráo nước.
+                <br>
+                Tiếp đến, bạn cho tôm vào tô, ướp với 1.5 muỗng canh nước mắm, 1 muỗng canh nước tương, 1 muỗng canh
+                đường, 1 muỗng cà phê bột ngọt, 1/2 muỗng cà phê hạt nêm, 1/2 muỗng cà phê tiêu (có thể thêm một ít nước
+                màu) vào tôm.
+                <br>
+                Bạn trộn đều hỗn hợp trên lên và để ướp trong khoảng 10 - 15 phút.
+
+              </h3>
+            </article>
+
+            <article class="popular__card">
+              <img src="https://cdn.tgdd.vn/2022/06/CookRecipe/GalleryStep/lam-tom-kho-man-3.jpg" alt="popular image"
+                style="border-radius: 60px;width: 170px; height: 155px;" class="popular__img">
+
+              Bước 2
+              <h3 class="popular_name" style="text-align: left;">
+                Bạn bắc chảo lên bếp, cho 1 muỗng canh dầu ăn vào, đợi dầu nóng thì cho tỏi vào phi thơm.
+                <br>
+                Khi tỏi thơm vàng thì bạn cho tôm đã ướp gia vị vào, xào nhanh trên lửa vừa cho tôm săn lại.
+                <br>
+                Sau đó, bạn cho tiếp 3 muỗng canh nước lọc và 1/2 muỗng canh tương ớt vào để món kho được sánh và ngon
+                hơn, kho ở lửa nhỏ vừa.
+                <br>
+                Đến khi thấy tôm vừa sệt nước thì cho hành lá đã cắt khúc vào, nêm thêm 1 ít tiêu nữa là xong.
+              </h3>
+            </article>
+
+            <article class="popular__card">
+              <img src="https://cdn.tgdd.vn/2022/06/CookRecipe/GalleryStep/thanh-pham-1.jpg"
+                style="border-radius: 60px;width: 170px; height: 155px;" alt="popular image" class="popular__img">
+              Bước 3
+              <h3 class="popular_name" style="text-align: left;">
+                Tôm kho mặn khi hoàn thành có màu sắc đẹp mắt, hương thơm hấp dẫn. Thịt tôm săn chắc, mềm ngọt được tẩm
+                ướp đậm đà hòa quyện cùng mùi thơm của tiêu chắc chắn sẽ là món ăn cực kỳ bắt cơm đấy nhé!
+              </h3>
+            </article>
+
+          </div>
+        </section>
+
+  </main>
+  <!--==================== DONATE ====================-->
+  <section class="newsletter section">
+    <div class="newsletter__container container">
+      <div class="newsletter__content grid">
+        <img src="https://cdn.pixabay.com/photo/2014/12/21/23/57/money-576443_1280.png" alt="newsletter image"
+          class="newsletter__img">
+
+        <div class="newsletter__data">
+          <span class="section__subtitle"> Donate</span>
+          <h2 class="section__title">
+            Ủng hộ để giúp chúng tôi phát triển hơn nữa<br>
+
+          </h2>
+
+          <form action="" class="newsletter__form">
+            <input type="email" placeholder="$$$$$$" class="newsletter__input">
+
+            <button class="button newsletter__button">
+              Donate <i class="ri-send-plane-line"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <img src="assets/img/spinach-leaf.png" alt="newsletter__img" class="newsletter__spinach">
+    </div>
+
+  </section>
+  <!--==================== FOOTER ====================-->
+  <footer class="footer">
+    <div class="footer__container container grid">
+      <div>
+        <a href="#" class="footer__logo">
+          <img src="assets/img/favicon.ico" alt="logo image">
+          Simply Recipes
+        </a>
+
+        <p class="footer__description">
+          Thức ăn cho cơ thể là<br>
+          không đủ. Phải có thức <br>
+          ăn cho tâm hồn.
+        </p>
+      </div>
+
+      <div class="footer__content">
+        <div>
+          <h3 class="footer__title">Main Menu</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="#" class="footer__link">Menus</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">Offer</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">Events</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__title">Information</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="#" class="footer__link">Contact</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">Order & Returns</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">Videos</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">Reservation</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__title">Address</h3>
+          <ul class="footer__links">
+            <li class="footer__information">
+              26 Lê Thiện Trị<br>
+              Phường Hòa Quý&nbsp;Q.Ngũ Hành Sơn <br>
+              Tp.Đà Nẵng
+
+            </li>
+            <li class="footer__information">
+              9AM - 11PM
+            </li>
+
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__title">Social Media</h3>
+          <ul class="footer__social">
+            <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+              <i class="ri-facebook-box-fill"></i>
+            </a>
+
+            <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+              <i class="ri-instagram-fill"></i>
+            </a>
+
+            <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+              <i class="ri-twitter-fill"></i>
+            </a>
+
+          </ul>
+        </div>
+      </div>
+
+      <img src="assets/img/spring-onion.png" alt="footer image" class="footer__onion">
+      <img src="assets/img/spring-onion.png" alt="footer image" class="footer__onion-1">
+      <img src="assets/img/spinach-leaf.png" alt="footer image" class="footer__spinach">
+      <img src="assets/img/spinach-leaf.png" alt="footer image" class="footer__spinach-1">
+      <img src="assets/img/leaf-branch-4.png" alt="footer image" class="footer__leaf">
+
+    </div>
+
+    <div class="footer__info container">
+      <div class="footer__card">
+        <img src="assets/img/footer-card-1.png" alt="footer image">
+        <img src="assets/img/footer-card-2.png" alt="footer image">
+        <img src="assets/img/footer-card-3.png" alt="footer image">
+        <img src="assets/img/footer-card-4.png" alt="footer image">
+      </div>
+
+    </div>
+  </footer>
+
+  <!--========== SCROLL UP ==========-->
+  <div id="progress">
+    <span id="progress-value">&#x1F815;</span>
+  </div>
+
+  <!--=============== SCROLLREVEAL ===============-->
+  <script src="assets/js/scrollreveal.min.js"></script>
+
+  <!--=============== MAIN JS ===============-->
+  <script src="assets/js/main.js"></script>
+</body>
